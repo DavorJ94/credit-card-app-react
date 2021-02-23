@@ -1,0 +1,6 @@
+  /* background: linear-gradient(to right, #f46b45, #eea849); */
+  /* - Master Card */
+  /* background: linear-gradient(to left, #283593, #1976d2); - Visa */
+  /* background: linear-gradient(to right, #fe8c00, #f83600); - Discover */
+  /* background: #47bfff;  */
+  /* Default */

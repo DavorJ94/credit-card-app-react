@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import "./styles/App.css";
+import CreateCreditCard from "./CreateCreditCard";
+import CardList from "./CardList";
 function App() {
+  const items = Object.keys({ ...localStorage });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {items.length === 0 ? (
+        <Redirect to="/cards/add" />
+      ) : (
+        <Redirect to="/cards" />
+      )}
+      <Switch>
+        <Route exact path="/cards">
+          <CardList />
+        </Route>
+        <Route path="/cards/add">
+          <CreateCreditCard />
+        </Route>
+        <Route path="/cards/:id/edit">
+          <CreateCreditCard />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

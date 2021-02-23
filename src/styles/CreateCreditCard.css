@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  margin-top: 3em;
+  font-family: monospace, serif;
+}
+
+.card-content {
+  margin: 0 auto;
+  width: 400px;
+  height: 200px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(118, 128, 168, 1) 0%,
+    rgba(167, 175, 194, 1) 50%,
+    rgba(203, 209, 219, 1) 100%
+  );
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1.5em 2em 1.5em;
+}
+
+.card-content__logo {
+  max-height: 2.1em;
+  margin: 0 0 0.75em auto;
+}
+
+.card-content__chip {
+  max-width: 50px;
+  margin: 0.5em 0 0 0;
+}
+
+.card-content__number {
+  display: flex;
+  column-gap: 1em;
+}
+.card-content__number h3 {
+  margin: 0.5em 0 0 0;
+  font-size: 2.1em;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.card-content__username-expdate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content__username-expdate h3 {
+  margin: 0;
+  margin-top: 0.5em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.form-elements {
+  display: flex;
+  flex-direction: column;
+  width: calc(400px + 3em);
+  margin: 0 auto;
+  margin-top: 1em;
+  row-gap: 0.75em;
+}
+
+.form-elements label {
+  font-size: 1.3em;
+}
+
+.form-elements input {
+  font-size: 1.3em;
+  font-family: monospace, serif;
+}
+
+label,
+button {
+  margin-top: 1em;
+}
+
+.card-number {
+  display: flex;
+  margin: 0;
+  column-gap: 1em;
+}
+
+.card-number input {
+  width: 12%;
+}
+
+/* Remove arrows from input type "number" */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* ------------------- */
+
+.exp-date {
+  width: 50%;
+}
+
+.buttonSave {
+  padding: 0.4em;
+  margin: 0;
+  margin-top: 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: monospace, serif;
+  cursor: pointer;
+  background-color: #0069d9;
+  color: white;
+}
+
+.buttonSave:hover,
+.buttonSave:focus {
+  background-color: #000ed9;
+  outline: none;
+}
+
+.buttonSave:disabled {
+  background-color: #747588;
+  cursor: auto;
+}

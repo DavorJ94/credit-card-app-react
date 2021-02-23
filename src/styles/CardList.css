@@ -1,0 +1,35 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-gap: 2em;
+  box-sizing: content-box;
+  margin-bottom: 2em;
+}
+.add-card {
+  margin: 0 auto;
+  width: 400px;
+  height: 200px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(118, 128, 168, 1) 0%,
+    rgba(167, 175, 194, 1) 50%,
+    rgba(203, 209, 219, 1) 100%
+  );
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 1.5em 2em 1.5em;
+}
+
+.add-card span {
+  font-size: 8em;
+  margin: 0;
+  color: #1c1c1c;
+}
+
+.links {
+  box-sizing: content-box;
+  color: inherit;
+  text-decoration: none;
+}
