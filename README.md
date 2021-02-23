@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Credit card app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Based on the initial challenge, this application is improved.
 
-## Available Scripts
+## Protection with inputs is improved and more controlled.
 
-In the project directory, you can run:
+### Improvements compared to the challenge/test:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Username needs to have two words, for first name and last name.
+- Inputs for credit card number need to be filled before submission (with first digit starting at 4 (Visa), 5 (MasterCard) or 6 (Discover) - user is notified what is invalid and what should be corrected upon submission). Thus, each input box needs to have 4 digits.
+- Input boxes for credit cards are limited to 4 digits only, and only digits are accepted.
+- Date is more controlled, i.e., it should be picked from the date picker. Lower dates than current month are not available, plus additional validation functions are written to make sure if the expiration date is invalid.
+- Better and design is created for credit cards based on their company, and there is also design of default credit card, until user types in first digit of card number (design is updated live, depending on the first number in the first input box the user types). Submission cannot be completed unless the user types 4, 5 or 6 as first digit. Separate script is written to check for validity of input boxes before button can be enabled for submitting.
+- "Save" button is disabled until all field are filled with data. Graphical representation of credit card is updated on change (that part was required by the challenge).
+- Written script to generate unique ids for each new card, which allows for higher flexibility and control over each memorized credit card. Of course, that gives the ability to modify existing cards, without saving them as copies (overwriting the local storage).
+- Added option to delete credit card from the base at the url where all cards are displayed. That option gives user full control of the interface.
+- Different graphical representations of each card are maintained in the list of all cards, which makes it easier for the user to navigate to desired one. Also, option to add new card has default graphical representation.
+- React routing was utilized, but separate script was written for dynamic url manipulation for prepopulation of the boxes based on the chosen card to be modified.
+- This project utilizes mainly React Hooks (useState, useEffect, useRef). There was no need for useContext.
