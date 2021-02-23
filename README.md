@@ -1,8 +1,8 @@
 # Credit card app
 
-## Based on the initial challenge, this application is improved.
+### Based on the initial challenge, this application is improved.
 
-## Protection with inputs is improved and more controlled.
+### Protection with inputs is improved and more controlled.
 
 ### Improvements compared to the challenge/test:
 
