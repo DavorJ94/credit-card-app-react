@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/credit-card-app-react/static/css/main.79e823d2.chunk.css",
+    "main.js": "/credit-card-app-react/static/js/main.7be7423e.chunk.js",
+    "main.js.map": "/credit-card-app-react/static/js/main.7be7423e.chunk.js.map",
+    "runtime-main.js": "/credit-card-app-react/static/js/runtime-main.70aaf716.js",
+    "runtime-main.js.map": "/credit-card-app-react/static/js/runtime-main.70aaf716.js.map",
+    "static/js/2.ac60f478.chunk.js": "/credit-card-app-react/static/js/2.ac60f478.chunk.js",
+    "static/js/2.ac60f478.chunk.js.map": "/credit-card-app-react/static/js/2.ac60f478.chunk.js.map",
+    "index.html": "/credit-card-app-react/index.html",
+    "static/css/main.79e823d2.chunk.css.map": "/credit-card-app-react/static/css/main.79e823d2.chunk.css.map",
+    "static/js/2.ac60f478.chunk.js.LICENSE.txt": "/credit-card-app-react/static/js/2.ac60f478.chunk.js.LICENSE.txt",
+    "static/media/MasterCard.873e86f4.png": "/credit-card-app-react/static/media/MasterCard.873e86f4.png",
+    "static/media/chip.5559fe89.png": "/credit-card-app-react/static/media/chip.5559fe89.png",
+    "static/media/visa.9a1d1ccb.png": "/credit-card-app-react/static/media/visa.9a1d1ccb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.70aaf716.js",
+    "static/js/2.ac60f478.chunk.js",
+    "static/css/main.79e823d2.chunk.css",
+    "static/js/main.7be7423e.chunk.js"
+  ]
+}
