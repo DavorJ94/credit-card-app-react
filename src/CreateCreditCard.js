@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useHistory } from "react-router-dom";
 import "./styles/CreateCreditCard.css";
 import { dateParser, reverseDateParser } from "./dateParser";
 import visa from "./images/visa.png";
@@ -17,6 +18,7 @@ import {
 
 function CreateCreditCard({ elements, showHide }) {
   /* HOOKS */
+  const history = useHistory();
   if (getIdFromLink()) {
     const items = Object.values({ ...localStorage });
     const thisCard = items.find((item) => {
@@ -139,6 +141,8 @@ function CreateCreditCard({ elements, showHide }) {
     const [cardNumValidated, cardNumMessage] = CardNumberValidation(state);
     if (dateValidated && usernameValidated && cardNumValidated) {
       localStorage.setItem(IdGenerator(state), JSON.stringify(state));
+      let path = `/cards`;
+      history.push(path);
     } else {
       alert(
         `${usernameMessage !== "" ? usernameMessage : "User name is VALID."}\n${
