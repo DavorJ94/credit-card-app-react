@@ -45,6 +45,8 @@
   cursor: pointer;
   font-size: 1.1em;
   transition: all 0.2s ease;
+  position: relative;
+  z-index: -1;
 }
 .fa-trash-alt:hover,
 .fa-trash-alt:focus {
@@ -54,10 +56,12 @@
 .btn {
   border: none;
   background: none;
-  box-sizing: content-box;
   margin: 0 auto;
+  box-sizing: content-box;
+  cursor: pointer;
 }
-
+.btn:hover,
 .btn:focus {
+  color: red;
   outline: none;
 }

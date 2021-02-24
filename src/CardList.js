@@ -7,13 +7,11 @@ function CardList() {
 
   const removeCard = (e) => {
     localStorage.removeItem(e.target.id);
-    setTimeout(() => {
-      setStorage(Object.values({ ...localStorage }));
-    }, 200);
+    setStorage(Object.values({ ...localStorage }));
   };
 
-  const items = storage;
-  const allCards = items.map((item) => {
+  const allCards = storage.map((item) => {
+    console.log("rendered");
     let element = JSON.parse(item);
     return (
       <div className="card-and-btn-container" key={element.id}>
@@ -28,8 +26,8 @@ function CardList() {
             showHide={false}
           />
         </Link>
-        <button className="btn" onClick={removeCard}>
-          <i id={element.id} className="fas fa-trash-alt"></i>
+        <button className="btn" onClick={removeCard} id={element.id}>
+          <i className="fas fa-trash-alt"></i>
         </button>
       </div>
     );
