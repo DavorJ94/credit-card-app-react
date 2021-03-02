@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import CreateCreditCard from "./CreateCreditCard";
 import "./styles/CardList.css";
@@ -11,8 +11,7 @@ function CardList() {
     setStorage(Object.values({ ...localStorage }));
   };
 
-  useEffect(() => {
-    console.log(typeof Object.keys({ ...localStorage }).length);
+  useLayoutEffect(() => {
     if (Object.keys({ ...localStorage }).length === 0) {
       let path = `/cards/add`;
       history1.push(path);
