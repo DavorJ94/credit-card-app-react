@@ -17,3 +17,5 @@
 - Different graphical representations of each card are maintained in the list of all cards, which makes it easier for the user to navigate to desired one. Also, option to add new card has default graphical representation.
 - React routing was utilized, but separate script was written for dynamic url manipulation for prepopulation of the boxes based on the chosen card to be modified.
 - This project utilizes mainly React Hooks (useState, useEffect, useRef). There was no need for useContext.
+- Used useLayoutEffect instead of useEffect for card list update. Mainly not to see page flickering when redirected to card addition.
+- Added functionality to auto-focus next input element when previous one is filled with four numbers (considers four inputs regarding card number).

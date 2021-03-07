@@ -78,6 +78,26 @@ function CreateCreditCard({ elements, showHide }) {
     setLogoState(placeholder);
   }, [state.inputOne]);
   /* use effect for logo display */
+
+  /* UseEffect for card number next input auto-focus */
+  useEffect(() => {
+    if (state.inputOne.length === 4 && state.inputTwo.length < 4)
+      inputTwo.current.focus();
+  }, [state.inputOne]);
+  useEffect(() => {
+    if (state.inputTwo.length === 4 && state.inputThree.length < 4)
+      inputThree.current.focus();
+  }, [state.inputTwo]);
+  useEffect(() => {
+    if (state.inputThree.length === 4 && state.inputFour.length < 4)
+      inputFour.current.focus();
+  }, [state.inputThree]);
+  useEffect(() => {
+    if (state.inputFour.length === 4 && state.inputOne.length < 4)
+      inputOne.current.focus();
+  }, [state.inputFour]);
+  /* UseEffect for card number next input auto-focus */
+
   useEffect(() => {
     IdGenerator(state);
     if (DisableButtonToggle(state)) {
@@ -137,6 +157,7 @@ function CreateCreditCard({ elements, showHide }) {
 
   /* Handling data submission */
   const handleSubmit = (e) => {
+    e.preventDefault();
     const [dateValidated, dateMessage] = DateValidation(state);
     const [usernameValidated, usernameMessage] = UsernameValidation(state);
     const [cardNumValidated, cardNumMessage] = CardNumberValidation(state);
