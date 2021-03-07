@@ -92,6 +92,7 @@ function CreateCreditCard({ elements, showHide }) {
       ...state,
       id: IdGenerator(state),
     });
+    usernameRef.current.focus();
     // eslint-disable-next-line
   }, []);
 
